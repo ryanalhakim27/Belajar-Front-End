@@ -5,6 +5,10 @@
     overflow-x: hidden;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     flex-direction: column;
