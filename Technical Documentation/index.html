@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="main-doc">
+        <section class="main-section" id="Add_react_to_a_website">
+            <header>
+                Add React to a Website
+            </header>
+            <p class="grey">Use as little or as much React as you need.</p>
+            <p>
+                React has been designed from the start for gradual adoption, and you can use <strong>as little or as much React as you need.</strong> Perhaps you only want to add some “sprinkles of interactivity” to an existing page. React components
+                are a great way to do that.
+            </p>
+            <p>
+                The majority of websites aren’t, and don’t need to be, single-page apps. With a few lines of code and no build tooling, try React in a small part of your website. You can then either gradually expand its presence, or keep it contained to a few dynamic
+                widgets.
+            </p>
+            <ul>
+                <li><a href="">Add React in One Minute</a></li>
+                <li><a href="">Optional: Try React with JSX (no bundler necessary!)</a></li>
+            </ul>
+        </section>
+        <section class="main-section" id="Add_React_in_One_Minute">
+            <header>
+                Add React in One Minute
+            </header>
+            <p>In this section, we will show how to add a React component to an existing HTML page. You can follow along with your own website, or create an empty HTML file to practice.</p>
+            <p>There will be no complicated tools or install requirements — to complete this section, you only need an internet connection, and a minute of your time.</p>
+            <p>Optional: Download the full example (2KB zipped)</p>
+            <section class="secondary-section" id="Step_1">
+                <header>
+                    Step 1: Add a DOM Container to the HTML
+                </header>
+                <p>First, open the HTML page you want to edit. Add an empty <code>&lt;div&gt;</code> tag to mark the spot where you want to display something with React. For example:</p>
+                <code>&lt;!-- ... existing HTML ... --&gt; <br />
+            &lt;div id="like_button_container"&gt;&lt;/div&gt; <br />
+            &lt!-- ... existing HTML ... --&gt;
+          </code>
+                <p>We gave this <code>&lt;div&gt;</code> a unique <code>id</code> HTML attribute. This will allow us to find it from the JavaScript code later and display a React component inside of it.</p>
+                <div class="tip-box">
+                    <div class="kosong"></div>
+                    <div class="text">
+                        <h4>Tip</h4>
+                        <p>
+                            You can place a “container” <code>&lt;div></code> like this anywhere inside the <code>&lt;body></code> tag. You may have as many independent DOM containers on one page as you need. They are usually empty — React will replace
+                            any existing content inside DOM containers.
+                        </p>
+                    </div>
+            </section>
+            <section class="secondary-section" id="Step2">
+                <header>
+                    Step 2: Add the Script Tags
+                </header>
+                <p>Next, add three <code>&lt;script></script></code> tags to the HTML page right before the closing <code>&lt;body></code>code tag:</p>
+                <code>&lt;!-- ... other HTML ... --&gt; <br>
+                        &lt;-- Load React. --> <br>
+                        &lt;-- Note: when deploying, replace "development.js" with "production.min.js". -->
+                        <br>&lt;script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin>&lt;/script&gt;<br> 
+                         &lt;script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin>&gt;script&gt;<br> 
+                        &lt!-- Load our React component. --><br> 
+                        &ltscript src="like_button.js">&lt/script><br>
+                        &lt/body>
+                    </code>
+                <p>The first two tags load React. The third one will load your component code.
+                </p>
+            </section>
+            <section class="secondary-section" id="Step3">
+                <header>
+                    Step 3: Create a React Component
+                </header>
+                <p>Create a file called <code>like_button.js</code> next to your HTML page.</p>
+                <p>Open this starter code and paste it into the file you created.</p>
+                <div class="tip-box">
+                    <div class="kosong"></div>
+                    <div class="text">
+                        <h4>Tip</h4>
+                        <p>
+                            This code defines a React component called <code>LikeButton</code> . Don’t worry if you don’t understand it yet — we’ll cover the building blocks of React later in our hands-on tutorial and main concepts guide. For now, let’s
+                            just get it showing on the screen!
+                        </p>
+                    </div>
+                </div>
+                <p>After the starter code, add two lines to the bottom of<code>like_button.js:</code> </p>
+                <code>
+                    // ... the starter code you pasted ...<br>
+                    const domContainer = document.querySelector('#like_button_container');
+                    ReactDOM.render(e(LikeButton), domContainer);
+                </code>
+                <p>These two lines of code find the
+                    <code>&lt;div></code> we added to our HTML in the first step, and then display our “Like” button React component inside of it.</p>
+            </section>
+            <section class="secondary-section" id="Step$">
+                <header>
+                    That’s It!
+                </header>
+                <p>There is no step four. You have just added the first React component to your website.</p>
+                <p>Check out the next sections for more tips on integrating React.</p>
+                <ul>
+                    <li>View the full example source code</li>
+                    <li>Download the full example (2KB zipped)</li>
+                </ul>
+            </section>
+            <section class="mini-section" id="Reuse">
+                <header>
+                    Tip: Reuse a Component
+                </header>
+                <p>Commonly, you might want to display React components in multiple places on the HTML page. Here is an example that displays the “Like” button three times and passes some data to it:</p>
+                <ul>
+                    <li>View the full example source code</li>
+                    <li>Download the full example (2KB zipped)</li>
+                </ul>
+                <div class="tip-box">
+                    <div class="kosong"></div>
+                    <div class="text">
+                        <h4>Note</h4>
+                        <p>
+                            This strategy is mostly useful while React-powered parts of the page are isolated from each other. Inside React code, it’s easier to use component composition instead.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="mini-section" id="Minify">
+                <header>
+                    <h4>Tip: Minify JavaScript for Production</h4>
+                </header>
+                <p>Before deploying your website to production, be mindful that unminified JavaScript can significantly slow down the page for your users.</p>
+                <p>If you already minify the application scripts, your site will be production-ready if you ensure that the deployed HTML loads the versions of React ending in <code>production.min.js</code>:</p>
+                <code>&lt;script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin>&lt;/script><br>
+            &lt;script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin>&lt;/script></code>
+                <p>If you don’t have a minification step for your scripts, here’s one way to set it up.</p>
+            </section>
+            <section class="mini-section" id="Optional">
+                <header>
+                    <h3>Optional: Try React with JSX</h3>
+                </header>
+                <p>In the examples above, we only relied on features that are natively supported by the browsers. This is why we used a JavaScript function call to tell React what to display:</p>
+                <code>
+                const e = React.createElement;<br><br>
+                // Display a "Like" &lt;button><br>
+                return e(<br>
+                'button',<br>
+                { onClick: () => this.setState({ liked: true }) },<br>
+                'Like'<br>
+                );
+            </code>
+                <p>However, React also offers an option to use JSX instead:</p>
+                <code>// Display a "Like" &lt;button> <br>
+            return (<br>
+            &lt;button onClick={() => this.setState({ liked: true })}><br>
+            Like<br>
+             &lt;button onClick={() => this.setState({ liked: true })}><br>
+             &lt;/button><br>
+            );</code>
+                <p>These two code snippets are equivalent. While JSX is completely optional, many people find it helpful for writing UI code — both with React and with other libraries.</p>
+                <p>You can play with JSX using this online converter.</p>
+            </section>
+        </section>
+        <section class="main-section" id="Quickly_Try_JSX">
+            <header>
+                Quickly Try JSX
+            </header>
+            <p>The quickest way to try JSX in your project is to add this &lt;script> tag to your page:</p>
+            <code>&lt;script src="https://unpkg.com/babel-standalone@6/babel.min.js"><br>&lt;/script></code>
+            <p>Now you can use JSX in any <code>&lt;script></code> tag by adding <code>type="text/babel"</code> attribute to it. Here is an example HTML file with JSX that you can download and play with.</p>
+            <p>
+                This approach is fine for learning and creating simple demos. However, it makes your website slow and isn’t suitable for production. When you’re ready to move forward, remove this new<code>&lt;script></code> tag and the <code>type="text/babel"</code>                attributes you’ve added. Instead, in the next section you will set up a JSX preprocessor to convert all your <code>&lt;script> </code> tags automatically.
+            </p>
+        </section>
+        <section class="main-section" id="Add_JSX_to_a_Project">
+            <header>
+                Add JSX to a Project
+            </header>
+            <p>Adding JSX to a project doesn’t require complicated tools like a bundler or a development server. Essentially, adding JSX is a lot like adding a CSS preprocessor. The only requirement is to have Node.js installed on your computer.</p>
+            <p>Go to your project folder in the terminal, and paste these two commands:</p>
+            <ol>
+                <li>Step 1: Run <code>npm init -y </code> (if it fails, here’s a fix)</li>
+                <li>Step 2: Run <code>npm install babel-cli@6 babel-preset-react-app@3</code>
+                </li>
+            </ol>
+            <div class="tip-box">
+                <div class="kosong"></div>
+                <div class="text">
+                    <h4>Tip</h4>
+                    <p>
+                        We’re using npm here only to install the JSX preprocessor; you won’t need it for anything else. Both React and the application code can stay as <code>&lt;script></code> tags with no changes.
+                    </p>
+                </div>
+            </div>
+            <p>Congratulations! You just added a production-ready JSX setup to your project.</p>
+        </section>
+        <section class="main-section" id="Run_JSX_Preprocessor">
+            <header>
+                Run JSX Preprocessor
+            </header>
+            <p>Create a folder called src and run this terminal command:</p>
+            <code>npx babel --watch src --out-dir . --presets react-app/prod</code>
+            <div class="tip-box">
+                <div class="kosong"></div>
+                <div class="text">
+                    <h4>Note</h4>
+                    <p><code>npx</code> is not a typo — it’s a package runner tool that comes with npm 5.2+.</p>
+                    <p>
+                        If you see an error message saying “You have mistakenly installed the babel package”, you might have missed the previous step. Perform it in the same folder, and then try again.
+                    </p>
+                </div>
+            </div>
+            <p>Don’t wait for it to finish — this command starts an automated watcher for JSX.</p>
+            <p>If you now create a file called <code>src/like_button.js</code> with this JSX starter code, the watcher will create a preprocessed <code>like_button.js</code> with the plain JavaScript code suitable for the browser. When you edit the source
+                file with JSX, the transform will re-run automatically.</p>
+            <p>As a bonus, this also lets you use modern JavaScript syntax features like classes without worrying about breaking older browsers. The tool we just used is called Babel, and you can learn more about it from its documentation.</p>
+            <p>If you notice that you’re getting comfortable with build tools and want them to do more for you, the next section describes some of the most popular and approachable toolchains. If not — those script tags will do just fine!</p>
+        </section>
+    </main>
+    <nav id="navbar">
+        <header>
+            <a class="nav-link" href="#Add_react_to_a_website">Add React to a Website</a>
+        </header>
+        <ul>
+            <li><a class="nav-link" href="#Add_React_in_One_Minute">Add React in One Minute</a></li>
+            <li><a class="nav-link" href="#Quickly_Try_JSX">Quickly Try JSX</a>
+                <ul>
+                    <li><a>Step 1: Add a DOM Container to the HTML</a></li>
+                    <li>
+                        <a>Step 2: Add the Script Tags</a>
+                    </li>
+                    <li>
+                        <a>Step 3: Create a React Component</a>
+                    </li>
+                    <li>
+                        <a>That’s It!</a>
+                    </li>
+                    <li>
+                        <a>Tip: Reuse a Component</a>
+                    </li>
+                    <li>
+                        <a>Tip: Minify JavaScript for Production</a>
+                    </li>
+                    <li>
+                        <a>Optional: Try React with JSX</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="nav-link" href="#Add_JSX_to_a_Project">Add JSX to a Project</a></li>
+            <li><a class="nav-link" href="#Run_JSX_Preprocessor">Run JSX Preprocessor</a></li>
+        </ul>
+        <!-- <div class="menu-toggle">
+            <input id="check" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> -->
+    </nav>
+</body>
+
+</html>
