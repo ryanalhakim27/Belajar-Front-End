@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" type="text/css" />
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="container">
+        <div class="form-box">
+            <header>
+                <h1 id="title"><span class="gojek">gojek</span> </h1>
+                <h1>CUSTOMER SURVEY</h1>
+                <p id="description">Thank you for always improving our quality!</p>
+            </header>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input id="name" type="text" placeholder="Enter your name" required class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input id="email" type="email" placeholder="Enter your email" required class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">Age</label>
+                    <input id="number" placeholder="Age" type="number" min="1" max="100" required class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input id="phone-number" placeholder="Input your number" type="text" required class="form-control" />
+                </div>
+                <div class="form-group">
+                    <p>What NGOJEK service did you use most?</p>
+                    <select name="services" class="form-control" id="dropdown">
+              <option value="go-ride">Nge-Ride</option>
+              <option value="go-car">Nge-Car</option>
+              <option value="g-food">Nge-Food</option>
+              <option value="go-mart">Nge-Mart</option>
+              <option value="go-send">Nge-Send</option>
+              <option value="go-box">Nge-Box</option>
+            </select>
+                </div>
+                <div class="form-group">
+                    <p>Will you recommend this service to a friend?</p>
+                    <label> <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Definitely</label>
+                    <label><input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
+                    <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not sure</label>
+                </div>
+                <div class="form-group">
+                    <p>What service's features you like to improve?</p>
+                    <label><input name="prefer" value="user-interface" type="checkbox" class="input-checkbox" /> User Interface</label>
+                    <label> <input name="prefer" value="payment" type="checkbox" class="input-checkbox" /> Payments</label>
+                    <label><input name="prefer" value="promo" type="checkbox" class="input-checkbox" /> Promo</label>
+                    <label><input name="prefer" value="fare" type="checkbox" class="input-checkbox" /> Fare</label>
+                    <label><input name="prefer" value="eco-friendly-option" type="checkbox" class="input-checkbox" /> Eco-Friendly Option</label>
+                    <label><input name="prefer" value="covid-prevention-option" type="checkbox" class="input-checkbox" /> Covid Prevention Option</label>
+                    <label><input name="prefer" value="Insurances" type="checkbox" class="input-checkbox" /> Travel Insurances Option</label>
+                </div>
+                <div class="form-group">
+                    <p>Any comments or suggestions?</p>
+                    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>
